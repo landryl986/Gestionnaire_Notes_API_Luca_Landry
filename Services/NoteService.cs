@@ -7,22 +7,21 @@ using Gestionnaire_Notes_API_Luca_Landry.Models;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Services
 {
-    public class PhilialService : IPhilial
+    public class NoteService : INote
     {
         private readonly DataContext _context;
 
-        public PhilialService(DataContext context)
+        public NoteService(DataContext context)
         {
             _context = context;
         }
-        
-        public PhilialModel AddPhilial(PhilialModel newPhilial)
+        public NoteModel AddNote(NoteModel newNote)
         {
             try
             {
-                _context.Philials.Add(newPhilial);
+                _context.Notes.Add(newNote);
                 _context.SaveChanges();
-                return newPhilial;
+                return newNote;
             }
             catch (Exception e)
             {
@@ -35,7 +34,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
         {
             try
             {
-                _context.Philials.Remove(_context.Philials.FirstOrDefault(p => p.Id == id));
+                _context.Notes.Remove(_context.Notes.FirstOrDefault(n => n.Id == id));
             }
             catch (Exception e)
             {
@@ -48,7 +47,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
         {
             try
             {
-                return _context.Philials.Any(p => p.Id == id);
+                return _context.Notes.Any(n => n.Id == id);
             }
             catch (Exception e)
             {
@@ -57,11 +56,11 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public bool ExistsByName(string name)
+        public IList<NoteModel> GetAll()
         {
             try
             {
-                return _context.Philials.Any(p => p.philialName.Contains(name));
+                return _context.Notes.ToList();
             }
             catch (Exception e)
             {
@@ -70,11 +69,11 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public IList<PhilialModel> GetAll()
+        public NoteModel GetSingle(int id)
         {
             try
             {
-                return _context.Philials.ToList();
+                return _context.Notes.FirstOrDefault(n => n.Id == id);
             }
             catch (Exception e)
             {
@@ -83,31 +82,18 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public PhilialModel GetSingle(int id)
+        public NoteModel Update(int id, NoteModel model)
         {
             try
             {
-                return _context.Philials.FirstOrDefault(p => p.Id == id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-        }
+                var note = _context.Notes.FirstOrDefault(n => n.Id == id);
 
-        public PhilialModel Update(int id, PhilialModel model)
-        {
-            try
-            {
-                var philial = _context.Philials.FirstOrDefault(p => p.Id == id);
-
-                philial.philialName = model.philialName;
-                philial.User = model.User;
+                note.note = model.note;
+                note.Branche = model.Branche;
 
                 _context.SaveChanges();
 
-                return philial;
+                return note;
             }
             catch (Exception e)
             {

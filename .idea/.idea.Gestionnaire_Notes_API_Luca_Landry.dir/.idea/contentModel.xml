@@ -55,6 +55,8 @@
       </e>
       <e p="README.md" t="Include" />
       <e p="Services" t="Include">
+        <e p="BrancheService.cs" t="Include" />
+        <e p="NoteService.cs" t="Include" />
         <e p="PhilialService.cs" t="Include" />
         <e p="UserService.cs" t="Include" />
       </e>

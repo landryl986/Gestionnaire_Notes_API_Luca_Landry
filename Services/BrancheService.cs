@@ -7,22 +7,21 @@ using Gestionnaire_Notes_API_Luca_Landry.Models;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Services
 {
-    public class PhilialService : IPhilial
+    public class BrancheService : IBranche
     {
         private readonly DataContext _context;
 
-        public PhilialService(DataContext context)
+        public BrancheService(DataContext context)
         {
             _context = context;
         }
-        
-        public PhilialModel AddPhilial(PhilialModel newPhilial)
+        public BrancheModel AddBranche(BrancheModel newBranche)
         {
             try
             {
-                _context.Philials.Add(newPhilial);
+                _context.Branches.Add(newBranche);
                 _context.SaveChanges();
-                return newPhilial;
+                return newBranche;
             }
             catch (Exception e)
             {
@@ -35,7 +34,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
         {
             try
             {
-                _context.Philials.Remove(_context.Philials.FirstOrDefault(p => p.Id == id));
+                _context.Branches.Remove(_context.Branches.FirstOrDefault(b => b.Id == id));
             }
             catch (Exception e)
             {
@@ -48,7 +47,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
         {
             try
             {
-                return _context.Philials.Any(p => p.Id == id);
+                return _context.Branches.Any(b => b.Id == id);
             }
             catch (Exception e)
             {
@@ -61,7 +60,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
         {
             try
             {
-                return _context.Philials.Any(p => p.philialName.Contains(name));
+                return _context.Branches.Any(b => b.brancheName.Contains(name));
             }
             catch (Exception e)
             {
@@ -70,11 +69,11 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public IList<PhilialModel> GetAll()
+        public IList<BrancheModel> GetAll()
         {
             try
             {
-                return _context.Philials.ToList();
+                return _context.Branches.ToList();
             }
             catch (Exception e)
             {
@@ -83,11 +82,11 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public PhilialModel GetSingle(int id)
+        public BrancheModel GetSingle(int id)
         {
             try
             {
-                return _context.Philials.FirstOrDefault(p => p.Id == id);
+                return _context.Branches.FirstOrDefault(b => b.Id == id);
             }
             catch (Exception e)
             {
@@ -96,18 +95,19 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public PhilialModel Update(int id, PhilialModel model)
+        public BrancheModel Update(int id, BrancheModel model)
         {
             try
             {
-                var philial = _context.Philials.FirstOrDefault(p => p.Id == id);
+                var branche = _context.Branches.FirstOrDefault(b => b.Id == id);
 
-                philial.philialName = model.philialName;
-                philial.User = model.User;
+                branche.brancheName = model.brancheName;
+                branche.barem = model.barem;
+                branche.Philial = model.Philial;
 
                 _context.SaveChanges();
 
-                return philial;
+                return branche;
             }
             catch (Exception e)
             {
