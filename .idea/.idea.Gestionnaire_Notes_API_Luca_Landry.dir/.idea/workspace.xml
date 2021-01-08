@@ -23,38 +23,20 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:ORM" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/DataContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interfaces/IBranche.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interfaces/INote.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interfaces/IPhilial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interfaces/IUser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gestionnaire_Notes_API_Luca_Landry.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Gestionnaire_Notes_API_Luca_Landry.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/BrancheModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BrancheModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/NoteModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/NoteModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/PhilialModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/PhilialModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/UserModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +61,10 @@
         <option value="$PROJECT_DIR$/Models/PhilialModel.cs" />
         <option value="$PROJECT_DIR$/Models/UserModel.cs" />
         <option value="$PROJECT_DIR$/Models/BrancheModel.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/IUser.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/INote.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/IBranche.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/IPhilial.cs" />
       </list>
     </option>
   </component>
@@ -171,6 +157,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

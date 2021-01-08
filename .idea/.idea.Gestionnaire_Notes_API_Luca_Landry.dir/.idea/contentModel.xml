@@ -24,9 +24,15 @@
       </e>
       <e p="Gestionnaire_Notes_API_Luca_Landry.csproj" t="IncludeRecursive" />
       <e p="Gestionnaire_Notes_API_Luca_Landry.db" t="Include" />
+      <e p="Interfaces" t="Include">
+        <e p="IBranche.cs" t="Include" />
+        <e p="INote.cs" t="Include" />
+        <e p="IPhilial.cs" t="Include" />
+        <e p="IUser.cs" t="Include" />
+      </e>
       <e p="Migrations" t="Include">
-        <e p="20210108095023_InitialCreate.cs" t="Include" />
-        <e p="20210108095023_InitialCreate.Designer.cs" t="Include" />
+        <e p="20210108095802_SetupDatabase.cs" t="Include" />
+        <e p="20210108095802_SetupDatabase.Designer.cs" t="Include" />
         <e p="DataContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
