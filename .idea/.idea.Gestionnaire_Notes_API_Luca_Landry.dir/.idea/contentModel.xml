@@ -54,6 +54,9 @@
         <e p="launchSettings.json" t="Include" />
       </e>
       <e p="README.md" t="Include" />
+      <e p="Services" t="Include">
+        <e p="UserService.cs" t="Include" />
+      </e>
       <e p="Startup.cs" t="Include" />
       <e p="UseCase" t="Include">
         <e p="UseCaseAdmin.png" t="Include" />

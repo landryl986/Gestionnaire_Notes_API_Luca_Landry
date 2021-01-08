@@ -29,14 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Interfaces/IBranche.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/INote.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/IPhilial.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interfaces/IUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +60,7 @@
         <option value="$PROJECT_DIR$/Interfaces/INote.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IBranche.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IPhilial.cs" />
+        <option value="$PROJECT_DIR$/Services/UserService.cs" />
       </list>
     </option>
   </component>
@@ -130,6 +126,14 @@
       <workItem from="1610031257144" duration="1148000" />
       <workItem from="1610095441146" duration="3861000" />
     </task>
+    <task id="LOCAL-00001" summary="Interfaces done">
+      <created>1610103899295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610103899295</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +165,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Interfaces done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2320" y="-318" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610099586260">
@@ -183,5 +189,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1610032468186" />
+    <state x="2521" y="-276" key="RiderGenerateDialog" timestamp="1610103988274">
+      <screen x="1440" y="-703" width="2560" height="1440" />
+    </state>
+    <state x="2521" y="-276" key="RiderGenerateDialog/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610103988274" />
+    <state x="2320" y="-256" key="Vcs.Push.Dialog.v2" timestamp="1610103903187">
+      <screen x="1440" y="-703" width="2560" height="1440" />
+    </state>
+    <state x="2320" y="-256" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610103903187" />
   </component>
 </project>
