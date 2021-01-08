@@ -29,7 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/UserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/PhilialService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -61,6 +61,7 @@
         <option value="$PROJECT_DIR$/Interfaces/IBranche.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IPhilial.cs" />
         <option value="$PROJECT_DIR$/Services/UserService.cs" />
+        <option value="$PROJECT_DIR$/Services/PhilialService.cs" />
       </list>
     </option>
   </component>
@@ -189,10 +190,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1610032468186" />
-    <state x="2521" y="-276" key="RiderGenerateDialog" timestamp="1610103988274">
+    <state x="2521" y="-276" key="RiderGenerateDialog" timestamp="1610104976881">
       <screen x="1440" y="-703" width="2560" height="1440" />
     </state>
-    <state x="2521" y="-276" key="RiderGenerateDialog/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610103988274" />
+    <state x="2521" y="-276" key="RiderGenerateDialog/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610104976881" />
     <state x="2320" y="-256" key="Vcs.Push.Dialog.v2" timestamp="1610103903187">
       <screen x="1440" y="-703" width="2560" height="1440" />
     </state>
