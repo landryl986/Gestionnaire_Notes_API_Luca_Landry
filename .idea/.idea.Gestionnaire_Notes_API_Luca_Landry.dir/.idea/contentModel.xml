@@ -21,6 +21,7 @@
       </e>
       <e p="Gestionnaire_Notes_API_Luca_Landry.csproj" t="IncludeRecursive" />
       <e p="Interfaces" t="Include">
+        <e p="IPhilial.cs" t="Include" />
         <e p="IUser.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
