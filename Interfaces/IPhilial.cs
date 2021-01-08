@@ -9,6 +9,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Interfaces
         void Delete(int id);
         IList<PhilialModel> GetAll();
         PhilialModel GetSingle(int id);
-        PhilialModel Update(int id, UserModel model);
+        PhilialModel Update(int id, PhilialModel model);
     }
 }

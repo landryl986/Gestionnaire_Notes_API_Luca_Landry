@@ -29,7 +29,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Interfaces/IPhilial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interfaces/INote.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/IPhilial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IPhilial.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +57,7 @@
         <option value="$PROJECT_DIR$/Models/BrancheModel.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IUser.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IPhilial.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/INote.cs" />
       </list>
     </option>
   </component>
