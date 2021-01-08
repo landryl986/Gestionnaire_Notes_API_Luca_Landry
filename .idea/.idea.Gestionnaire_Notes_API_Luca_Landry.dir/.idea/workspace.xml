@@ -28,10 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Interfaces/IBranche.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/INote.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/INote.cs" afterDir="false" />
-    </list>
+    <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
