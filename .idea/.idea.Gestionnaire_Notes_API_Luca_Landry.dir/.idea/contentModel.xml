@@ -16,8 +16,14 @@
         <e p="DiagramActivite.png" t="Include" />
         <e p="DiagramActiviteModifiable.xml" t="Include" />
       </e>
+      <e p="Enums" t="Include">
+        <e p="Barems.cs" t="Include" />
+      </e>
       <e p="Gestionnaire_Notes_API_Luca_Landry.csproj" t="IncludeRecursive" />
       <e p="Models" t="Include">
+        <e p="BrancheModel.cs" t="Include" />
+        <e p="NoteModel.cs" t="Include" />
+        <e p="PhilialModel.cs" t="Include" />
         <e p="UserModel.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">
