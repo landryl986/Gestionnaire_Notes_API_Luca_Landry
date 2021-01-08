@@ -8,6 +8,9 @@
       <e p="Controllers" t="Include">
         <e p="WeatherForecastController.cs" t="Include" />
       </e>
+      <e p="Data" t="Include">
+        <e p="DataContext.cs" t="Include" />
+      </e>
       <e p="DBDiagram" t="Include">
         <e p="DBDiagram.png" t="Include" />
         <e p="DBDiagramModifiable.xml" t="Include" />
@@ -20,6 +23,12 @@
         <e p="Barems.cs" t="Include" />
       </e>
       <e p="Gestionnaire_Notes_API_Luca_Landry.csproj" t="IncludeRecursive" />
+      <e p="Gestionnaire_Notes_API_Luca_Landry.db" t="Include" />
+      <e p="Migrations" t="Include">
+        <e p="20210108095023_InitialCreate.cs" t="Include" />
+        <e p="20210108095023_InitialCreate.Designer.cs" t="Include" />
+        <e p="DataContextModelSnapshot.cs" t="Include" />
+      </e>
       <e p="Models" t="Include">
         <e p="BrancheModel.cs" t="Include" />
         <e p="NoteModel.cs" t="Include" />

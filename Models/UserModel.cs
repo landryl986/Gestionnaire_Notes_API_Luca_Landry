@@ -6,7 +6,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
     public class UserModel
     {
         [Required]
-        public int userId { get; set; }
+        public int Id { get; set; }
         
         [Required]
         public string userName { get; set; }

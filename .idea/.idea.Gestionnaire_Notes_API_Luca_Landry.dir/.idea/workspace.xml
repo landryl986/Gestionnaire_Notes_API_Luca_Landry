@@ -19,16 +19,42 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:ORM" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Enums/Barems.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/BrancheModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/NoteModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/PhilialModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/DataContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gestionnaire_Notes_API_Luca_Landry.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Gestionnaire_Notes_API_Luca_Landry.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/BrancheModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BrancheModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/NoteModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/NoteModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/PhilialModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/PhilialModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,15 +62,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Models/UserModel.cs" />
-        <option value="$PROJECT_DIR$/Models/PhilialModel.cs" />
         <option value="$PROJECT_DIR$/Enums/Barems.cs" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/Data/DataContext.cs" />
         <option value="$PROJECT_DIR$/Models/NoteModel.cs" />
+        <option value="$PROJECT_DIR$/Models/PhilialModel.cs" />
+        <option value="$PROJECT_DIR$/Models/UserModel.cs" />
         <option value="$PROJECT_DIR$/Models/BrancheModel.cs" />
       </list>
     </option>
@@ -56,6 +89,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite.xerial&#10;sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -108,7 +142,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610031240350</updated>
       <workItem from="1610031257144" duration="1148000" />
-      <workItem from="1610095441146" duration="1529000" />
+      <workItem from="1610095441146" duration="3861000" />
     </task>
     <servers />
   </component>
@@ -120,7 +154,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="ORM" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -130,6 +176,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2320" y="-318" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610099586260">
+      <screen x="1440" y="-703" width="2560" height="1440" />
+    </state>
+    <state x="2320" y="-318" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610099586260" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1610032468186">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
