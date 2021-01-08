@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Gestionnaire_Notes_API_Luca_Landry.Enums;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Models
@@ -6,7 +7,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
     public class BrancheModel
     {
         [Required]
-        public int brancheId { get; set; }
+        public int Id { get; set; }
 
         [Required] 
         public string brancheName { get; set; }
@@ -15,6 +16,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
         public Barems barem { get; set; }
 
         [Required] 
-        public int philialId { get; set; }
+        public PhilialModel Philial { get; set; }
     }
 }
