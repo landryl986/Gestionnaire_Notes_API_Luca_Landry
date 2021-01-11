@@ -29,14 +29,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/BrancheController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/NoteController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/PhilialController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/PhilialController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/IBranche.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IBranche.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/BrancheModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BrancheModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/PhilialModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/PhilialModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/BrancheService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/BrancheService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaces/INote.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/INote.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/NoteModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/NoteModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/NoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/NoteService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +57,6 @@
       <list>
         <option value="$PROJECT_DIR$/Enums/Barems.cs" />
         <option value="$PROJECT_DIR$/Data/DataContext.cs" />
-        <option value="$PROJECT_DIR$/Interfaces/INote.cs" />
-        <option value="$PROJECT_DIR$/Services/NoteService.cs" />
-        <option value="$PROJECT_DIR$/Models/NoteModel.cs" />
         <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Models/UserModel.cs" />
         <option value="$PROJECT_DIR$/Services/UserService.cs" />
@@ -75,6 +70,10 @@
         <option value="$PROJECT_DIR$/Services/BrancheService.cs" />
         <option value="$PROJECT_DIR$/Controllers/PhilialController.cs" />
         <option value="$PROJECT_DIR$/Controllers/BrancheController.cs" />
+        <option value="$PROJECT_DIR$/Models/NoteModel.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/INote.cs" />
+        <option value="$PROJECT_DIR$/Services/NoteService.cs" />
+        <option value="$PROJECT_DIR$/Controllers/NoteController.cs" />
       </list>
     </option>
   </component>
@@ -139,7 +138,7 @@
       <updated>1610031240350</updated>
       <workItem from="1610031257144" duration="1148000" />
       <workItem from="1610095441146" duration="3861000" />
-      <workItem from="1610112270337" duration="12690000" />
+      <workItem from="1610112270337" duration="13078000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaces done">
       <created>1610103899295</created>

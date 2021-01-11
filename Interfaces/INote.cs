@@ -5,7 +5,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Interfaces
 {
     public interface INote
     {
-        NoteModel AddNote(NoteModel newNote);
+        createNoteDTO AddNote(createNoteDTO newNote);
         void Delete(int id);
         bool ExistsById(int id);
         IList<NoteModel> GetAll();

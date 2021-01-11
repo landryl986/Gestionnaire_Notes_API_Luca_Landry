@@ -15,11 +15,16 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
         {
             _context = context;
         }
-        public NoteModel AddNote(NoteModel newNote)
+        public createNoteDTO AddNote(createNoteDTO newNote)
         {
             try
             {
-                _context.Notes.Add(newNote);
+                var note = new NoteModel();
+
+                note.note = newNote.note;
+                note.BrancheId = newNote.BrancheId;
+                
+                _context.Notes.Add(note);
                 _context.SaveChanges();
                 return newNote;
             }

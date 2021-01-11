@@ -12,5 +12,16 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
         
         [Required]
         public BrancheModel Branche { get; set; }
+
+        public int BrancheId { get; set; }
+    }
+
+    public class createNoteDTO
+    {
+        public int Id { get; set; }
+        
+        public int note { get; set; }
+        
+        public int BrancheId { get; set; }
     }
 }
