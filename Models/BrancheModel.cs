@@ -16,5 +16,18 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
 
         [Required] 
         public PhilialModel Philial { get; set; }
+
+        public int philialId { get; set; }
+    }
+
+    public class createBrancheDTO
+    {
+        public int Id { get; set; }
+        
+        public string brancheName { get; set; }
+        
+        public Barems barem { get; set; }
+        
+        public int philialId { get; set; }
     }
 }

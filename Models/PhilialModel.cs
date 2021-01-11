@@ -22,7 +22,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
     {
         public int Id { get; set; }
         public string philialName { get; set; }
-        
         public int userID { get; set; }
     }
 }

@@ -15,11 +15,17 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
         {
             _context = context;
         }
-        public BrancheModel AddBranche(BrancheModel newBranche)
+        public createBrancheDTO AddBranche(createBrancheDTO newBranche)
         {
             try
             {
-                _context.Branches.Add(newBranche);
+                var branche = new BrancheModel();
+
+                branche.brancheName = newBranche.brancheName;
+                branche.philialId = newBranche.philialId;
+                branche.barem = newBranche.barem;
+                
+                _context.Branches.Add(branche);
                 _context.SaveChanges();
                 return newBranche;
             }

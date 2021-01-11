@@ -6,6 +6,7 @@
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
+        <e p="BrancheController.cs" t="Include" />
         <e p="PhilialController.cs" t="Include" />
         <e p="UserController.cs" t="Include" />
       </e>

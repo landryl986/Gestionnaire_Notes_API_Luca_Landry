@@ -5,7 +5,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Interfaces
 {
     public interface IBranche
     {
-        BrancheModel AddBranche(BrancheModel newBranche);
+        createBrancheDTO AddBranche(createBrancheDTO newBranche);
         void Delete(int id);
         bool ExistsById(int id);
         bool ExistsByName(string name);
