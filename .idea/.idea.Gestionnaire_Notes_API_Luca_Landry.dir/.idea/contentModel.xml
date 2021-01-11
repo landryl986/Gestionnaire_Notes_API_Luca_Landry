@@ -6,6 +6,7 @@
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
+        <e p="PhilialController.cs" t="Include" />
         <e p="UserController.cs" t="Include" />
       </e>
       <e p="Data" t="Include">
@@ -24,8 +25,6 @@
       </e>
       <e p="Gestionnaire_Notes_API_Luca_Landry.csproj" t="IncludeRecursive" />
       <e p="Gestionnaire_Notes_API_Luca_Landry.db" t="Include" />
-      <e p="Gestionnaire_Notes_API_Luca_Landry.db-shm" t="Include" />
-      <e p="Gestionnaire_Notes_API_Luca_Landry.db-wal" t="Include" />
       <e p="Interfaces" t="Include">
         <e p="IBranche.cs" t="Include" />
         <e p="INote.cs" t="Include" />
@@ -37,6 +36,8 @@
         <e p="20210111083332_UpdateDb.Designer.cs" t="Include" />
         <e p="20210111092125_UpdateUserAdmin.cs" t="Include" />
         <e p="20210111092125_UpdateUserAdmin.Designer.cs" t="Include" />
+        <e p="20210111103449_UpdatePhilialUser.cs" t="Include" />
+        <e p="20210111103449_UpdatePhilialUser.Designer.cs" t="Include" />
         <e p="DataContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">

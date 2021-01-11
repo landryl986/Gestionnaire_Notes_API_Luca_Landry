@@ -16,11 +16,16 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             _context = context;
         }
         
-        public PhilialModel AddPhilial(PhilialModel newPhilial)
+        public createPhilialDTO AddPhilial(createPhilialDTO newPhilial)
         {
             try
             {
-                _context.Philials.Add(newPhilial);
+                var philial = new PhilialModel();
+
+                philial.philialName = newPhilial.philialName;
+                philial.userId = newPhilial.userID;
+
+                _context.Philials.Add(philial);
                 _context.SaveChanges();
                 return newPhilial;
             }
