@@ -5,7 +5,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
 {
     public class UserModel
     {
-        [Required]
+        
         public int Id { get; set; }
         
         [Required]
@@ -21,9 +21,8 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
         [Required]
         public string userPassword { get; set; }
         
-        [Required]
         public byte[] Avatar { get; set; }
-
+        
         public bool admin { get; set; }
     }
 }

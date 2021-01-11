@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Gestionnaire_Notes_API_Luca_Landry.Data;
+using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
+using Gestionnaire_Notes_API_Luca_Landry.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,6 +37,11 @@ namespace Gestionnaire_Notes_API_Luca_Landry
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gestionnaire_Notes_API_Luca_Landry", Version = "v1" });
             });
+            
+            services.AddTransient<IUser, UserService>();
+            services.AddTransient<IPhilial, PhilialService>();
+            services.AddTransient<IBranche, BrancheService>();
+            services.AddTransient<INote, NoteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -29,14 +29,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cebd5d6-89e2-43a0-b6c6-246f84041186" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/BrancheService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/NoteService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources/3d52fdb6-aa1e-4e18-915d-ba30ea1733f1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/dataSources/3d52fdb6-aa1e-4e18-915d-ba30ea1733f1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Gestionnaire_Notes_API_Luca_Landry.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/IBranche.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/IBranche.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gestionnaire_Notes_API_Luca_Landry.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20210108095802_SetupDatabase.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20210108095802_SetupDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/DataContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/BrancheModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/BrancheModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/NoteModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/NoteModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/PhilialService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/PhilialService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/PhilialModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/PhilialModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UserModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UserModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/Gestionnaire_Notes_API_Luca_Landry.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/Gestionnaire_Notes_API_Luca_Landry.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.EntityFrameworkCore.targets" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Gestionnaire_Notes_API_Luca_Landry.csproj.EntityFrameworkCore.targets" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,20 +72,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Enums/Barems.cs" />
-        <option value="$PROJECT_DIR$/Startup.cs" />
         <option value="$PROJECT_DIR$/Data/DataContext.cs" />
-        <option value="$PROJECT_DIR$/Models/PhilialModel.cs" />
-        <option value="$PROJECT_DIR$/Models/UserModel.cs" />
-        <option value="$PROJECT_DIR$/Models/BrancheModel.cs" />
-        <option value="$PROJECT_DIR$/Interfaces/IUser.cs" />
         <option value="$PROJECT_DIR$/Interfaces/INote.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IPhilial.cs" />
-        <option value="$PROJECT_DIR$/Services/UserService.cs" />
         <option value="$PROJECT_DIR$/Interfaces/IBranche.cs" />
         <option value="$PROJECT_DIR$/Services/PhilialService.cs" />
         <option value="$PROJECT_DIR$/Services/BrancheService.cs" />
-        <option value="$PROJECT_DIR$/Models/NoteModel.cs" />
         <option value="$PROJECT_DIR$/Services/NoteService.cs" />
+        <option value="$PROJECT_DIR$/Models/PhilialModel.cs" />
+        <option value="$PROJECT_DIR$/Models/NoteModel.cs" />
+        <option value="$PROJECT_DIR$/Models/BrancheModel.cs" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/Models/UserModel.cs" />
+        <option value="$PROJECT_DIR$/Services/UserService.cs" />
+        <option value="$PROJECT_DIR$/Interfaces/IUser.cs" />
+        <option value="$PROJECT_DIR$/Controllers/UserController.cs" />
       </list>
     </option>
   </component>
@@ -133,7 +151,7 @@
       <updated>1610031240350</updated>
       <workItem from="1610031257144" duration="1148000" />
       <workItem from="1610095441146" duration="3861000" />
-      <workItem from="1610112270337" duration="1103000" />
+      <workItem from="1610112270337" duration="5313000" />
     </task>
     <task id="LOCAL-00001" summary="Interfaces done">
       <created>1610103899295</created>
@@ -178,25 +196,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="Interfaces done" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2320" y="-318" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610099586260">
+    <state x="2320" y="-318" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610355419099">
       <screen x="1440" y="-703" width="2560" height="1440" />
     </state>
-    <state x="2320" y="-318" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610099586260" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1610032468186">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="2320" y="-318" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610355419099" />
+    <state width="2518" height="423" key="GridCell.Tab.0.bottom" timestamp="1610356870263">
+      <screen x="1440" y="-703" width="2560" height="1440" />
     </state>
+    <state width="2518" height="423" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610356870263" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1610032468186" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1610032468185">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="2518" height="423" key="GridCell.Tab.0.center" timestamp="1610356870261">
+      <screen x="1440" y="-703" width="2560" height="1440" />
     </state>
+    <state width="2518" height="423" key="GridCell.Tab.0.center/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610356870261" />
     <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1610032468185" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1610032468185">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="2518" height="423" key="GridCell.Tab.0.left" timestamp="1610356870260">
+      <screen x="1440" y="-703" width="2560" height="1440" />
     </state>
+    <state width="2518" height="423" key="GridCell.Tab.0.left/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610356870260" />
     <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1610032468185" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1610032468186">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="2518" height="423" key="GridCell.Tab.0.right" timestamp="1610356870262">
+      <screen x="1440" y="-703" width="2560" height="1440" />
     </state>
+    <state width="2518" height="423" key="GridCell.Tab.0.right/0.0.1440.900/1440.-703.2560.1440@1440.-703.2560.1440" timestamp="1610356870262" />
     <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1610032468186" />
     <state x="2521" y="-276" key="RiderGenerateDialog" timestamp="1610113054994">
       <screen x="1440" y="-703" width="2560" height="1440" />

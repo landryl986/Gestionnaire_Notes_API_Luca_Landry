@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210108095802_SetupDatabase")]
-    partial class SetupDatabase
+    [Migration("20210111092125_UpdateUserAdmin")]
+    partial class UpdateUserAdmin
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,6 +50,9 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                     b.Property<int>("BrancheId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("note")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BrancheId");
@@ -84,7 +87,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<byte[]>("Avatar")
-                        .IsRequired()
                         .HasColumnType("BLOB");
 
                     b.Property<bool>("admin")

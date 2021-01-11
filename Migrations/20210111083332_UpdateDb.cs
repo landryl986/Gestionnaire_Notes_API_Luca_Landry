@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
 {
-    public partial class SetupDatabase : Migration
+    public partial class UpdateDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                     userLastName = table.Column<string>(nullable: false),
                     userEmail = table.Column<string>(nullable: false),
                     userPassword = table.Column<string>(nullable: false),
-                    Avatar = table.Column<byte[]>(nullable: false),
+                    Avatar = table.Column<byte[]>(nullable: true),
                     admin = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
@@ -72,6 +72,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    note = table.Column<int>(nullable: false),
                     BrancheId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

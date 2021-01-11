@@ -6,7 +6,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
 {
     public class BrancheModel
     {
-        [Required]
         public int Id { get; set; }
 
         [Required] 
