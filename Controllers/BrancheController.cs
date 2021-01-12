@@ -78,7 +78,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
         
         [HttpPost("branches/{id}")]
-        public IActionResult Update([FromRoute] int id, [FromBody] BrancheModel brancheUpdated)
+        public IActionResult Update([FromRoute] int id, [FromBody] PatchBrancheModel brancheUpdated)
         {
             try
             {

@@ -102,7 +102,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public BrancheModel Update(int id, BrancheModel model)
+        public PatchBrancheModel Update(int id, PatchBrancheModel model)
         {
             try
             {
@@ -110,11 +110,11 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
 
                 branche.brancheName = model.brancheName;
                 branche.barem = model.barem;
-                branche.Philial = model.Philial;
+                branche.philialId = model.philialId;
 
                 _context.SaveChanges();
 
-                return branche;
+                return model;
             }
             catch (Exception e)
             {

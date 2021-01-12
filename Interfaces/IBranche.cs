@@ -11,6 +11,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Interfaces
         bool ExistsByName(string name);
         IList<BrancheModel> GetAll();
         BrancheModel GetSingle(int id);
-        BrancheModel Update(int id, BrancheModel model);
+        PatchBrancheModel Update(int id, PatchBrancheModel model);
     }
 }

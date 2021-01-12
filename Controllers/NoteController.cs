@@ -77,7 +77,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
         
         [HttpPost("notes/{id}")]
-        public IActionResult Update([FromRoute] int id, [FromBody] NoteModel noteUpdated)
+        public IActionResult Update([FromRoute] int id, [FromBody] PatchNoteModel noteUpdated)
         {
             try
             {

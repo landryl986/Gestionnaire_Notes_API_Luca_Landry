@@ -18,10 +18,26 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
         public int userId { get; set; }
     }
 
+    /// <summary>
+    /// Cette classe est utilisée au moment de la création d'une nouvelle Philial
+    /// </summary>
     public class createPhilialDTO
     {
+        /// <summary>
+        /// ne pas entrer d'ID au moement de la création car celui-si est Auto increment
+        /// </summary>
         public int Id { get; set; }
         public string philialName { get; set; }
+        public int userID { get; set; }
+    }
+
+    /// <summary>
+    /// Cette classe est utilisée au moment de l'update d'une philial
+    /// </summary>
+    public class PatchPhilialModel
+    {
+        public string philialName { get; set; }
+        
         public int userID { get; set; }
     }
 }

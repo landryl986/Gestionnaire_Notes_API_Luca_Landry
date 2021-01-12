@@ -70,7 +70,6 @@
         <e p="UseCaseUser.png" t="Include" />
         <e p="UseCaseUserModifiable.xml" t="Include" />
       </e>
-      <e p="WeatherForecast.cs" t="Include" />
     </e>
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />

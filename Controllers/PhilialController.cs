@@ -78,7 +78,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
         
         [HttpPost("philials/{id}")]
-        public IActionResult Update([FromRoute] int id, [FromBody] PhilialModel philialUpdated)
+        public IActionResult Update([FromRoute] int id, [FromBody] PatchPhilialModel philialUpdated)
         {
             try
             {

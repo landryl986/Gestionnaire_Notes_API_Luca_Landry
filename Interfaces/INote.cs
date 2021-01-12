@@ -10,6 +10,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Interfaces
         bool ExistsById(int id);
         IList<NoteModel> GetAll();
         NoteModel GetSingle(int id);
-        NoteModel Update(int id, NoteModel model);
+        PatchNoteModel Update(int id, PatchNoteModel model);
     }
 }

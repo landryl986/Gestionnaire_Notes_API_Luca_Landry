@@ -102,18 +102,18 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public PhilialModel Update(int id, PhilialModel model)
+        public PatchPhilialModel Update(int id, PatchPhilialModel model)
         {
             try
             {
                 var philial = _context.Philials.FirstOrDefault(p => p.Id == id);
 
                 philial.philialName = model.philialName;
-                philial.User = model.User;
+                philial.userId = model.userID;
 
                 _context.SaveChanges();
 
-                return philial;
+                return model;
             }
             catch (Exception e)
             {

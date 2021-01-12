@@ -88,18 +88,18 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public NoteModel Update(int id, NoteModel model)
+        public PatchNoteModel Update(int id, PatchNoteModel model)
         {
             try
             {
                 var note = _context.Notes.FirstOrDefault(n => n.Id == id);
 
                 note.note = model.note;
-                note.Branche = model.Branche;
+                note.BrancheId = model.BrancheId;
 
                 _context.SaveChanges();
 
-                return note;
+                return model;
             }
             catch (Exception e)
             {
