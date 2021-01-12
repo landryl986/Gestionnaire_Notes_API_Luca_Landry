@@ -11,7 +11,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Interfaces
         bool ExistsByName(string name);
         IList<UserModel> GetAll();
         UserModel GetSingle(int id);
-        UserModel Update(int id, UserModel model);
+        PatchUserModel Update(int id, PatchUserModel model);
         void SetAvatar(int id, byte[] image);
         byte[] GetAvatar(int id);
     }

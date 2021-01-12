@@ -36,6 +36,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             try
             {
                 _context.Users.Remove(_context.Users.FirstOrDefault(u => u.Id == id));
+                _context.SaveChanges();
             }
             catch (Exception e)
             {
@@ -96,22 +97,22 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public UserModel Update(int id, UserModel model)
+        public PatchUserModel Update(int id, PatchUserModel model)
         {
             try
             {
+
                 var user = _context.Users.FirstOrDefault(u => u.Id == id);
             
                 user.userName = model.userName;
                 user.userLastName = model.userLastName;
                 user.userEmail = model.userEmail;
                 user.userPassword = model.userPassword;
-                user.Avatar = model.Avatar;
                 user.admin = model.admin;
 
                 _context.SaveChanges();
 
-                return user;
+                return model;
             }
             catch (Exception e)
             {
@@ -120,11 +121,11 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             }
         }
 
-        public void SetAvatar(int id, byte[] image)
+        public void SetAvatar(int Id, byte[] image)
         {
             try
             {
-                var user = _context.Users.Find(id);
+                var user = _context.Users.Single(u=>u.Id == Id);
                 user.Avatar = image;
                 _context.SaveChanges();
             }

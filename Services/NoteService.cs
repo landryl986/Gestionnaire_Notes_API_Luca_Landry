@@ -40,6 +40,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             try
             {
                 _context.Notes.Remove(_context.Notes.FirstOrDefault(n => n.Id == id));
+                _context.SaveChanges();
             }
             catch (Exception e)
             {

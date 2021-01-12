@@ -80,7 +80,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
 
         [HttpPost("users/{id}")]
-        public IActionResult Update([FromRoute] int id, [FromBody] UserModel userUpdated)
+        public IActionResult Update([FromRoute] int id, [FromBody] PatchUserModel userUpdated)
         {
             try
             {
@@ -95,13 +95,13 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
 
         [HttpPost("users/{Id}/avatar")]
-        public IActionResult AddAvatar([FromRoute] int id, IFormFile file)
+        public IActionResult AddAvatar([FromRoute] int Id, IFormFile file)
         {
             try
             {
                 var ms = new MemoryStream();
                 file.CopyTo(ms);
-                _userService.SetAvatar(id, ms.ToArray());
+                _userService.SetAvatar(Id, ms.ToArray());
                 return Ok();
             }
             catch (Exception e)

@@ -41,6 +41,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             try
             {
                 _context.Philials.Remove(_context.Philials.FirstOrDefault(p => p.Id == id));
+                _context.SaveChanges();
             }
             catch (Exception e)
             {

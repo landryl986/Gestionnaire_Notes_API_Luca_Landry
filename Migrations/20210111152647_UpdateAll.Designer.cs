@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210111092125_UpdateUserAdmin")]
-    partial class UpdateUserAdmin
+    [Migration("20210111152647_UpdateAll")]
+    partial class UpdateAll
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,9 +24,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("PhilialId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("barem")
                         .HasColumnType("INTEGER");
 
@@ -34,9 +31,12 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("philialId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("PhilialId");
+                    b.HasIndex("philialId");
 
                     b.ToTable("Branches");
                 });
@@ -66,16 +66,16 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("philialName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("userId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("userId");
 
                     b.ToTable("Philials");
                 });
@@ -117,7 +117,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                 {
                     b.HasOne("Gestionnaire_Notes_API_Luca_Landry.Models.PhilialModel", "Philial")
                         .WithMany()
-                        .HasForeignKey("PhilialId")
+                        .HasForeignKey("philialId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -135,7 +135,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                 {
                     b.HasOne("Gestionnaire_Notes_API_Luca_Landry.Models.UserModel", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
 {
-    public partial class UpdateDb : Migration
+    public partial class UpdateAll : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,14 +32,14 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     philialName = table.Column<string>(nullable: false),
-                    UserId = table.Column<int>(nullable: false)
+                    userId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Philials", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Philials_Users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Philials_Users_userId",
+                        column: x => x.userId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -53,14 +53,14 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     brancheName = table.Column<string>(nullable: false),
                     barem = table.Column<int>(nullable: false),
-                    PhilialId = table.Column<int>(nullable: false)
+                    philialId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Branches", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Branches_Philials_PhilialId",
-                        column: x => x.PhilialId,
+                        name: "FK_Branches_Philials_philialId",
+                        column: x => x.philialId,
                         principalTable: "Philials",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -87,9 +87,9 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Branches_PhilialId",
+                name: "IX_Branches_philialId",
                 table: "Branches",
-                column: "PhilialId");
+                column: "philialId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Notes_BrancheId",
@@ -97,9 +97,9 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Migrations
                 column: "BrancheId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Philials_UserId",
+                name: "IX_Philials_userId",
                 table: "Philials",
-                column: "UserId");
+                column: "userId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
