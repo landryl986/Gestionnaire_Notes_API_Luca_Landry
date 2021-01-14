@@ -1,18 +1,20 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
 
-namespace Gestionnaire_Notes_API_Luca_Landry.Interfaces
+namespace Gestionnaire_Notes_API_Luca_Landry.InterfacesService
 {
-    public interface IUser
+    public interface IUserService
     {
         UserModel AddUser(UserModel newUser);
         void Delete(int id);
         bool ExistsById(int id);
         bool ExistsByName(string name);
-        IList<UserModel> GetAll();
+        Task<IList<UserModel>> GetAll();
         UserModel GetSingle(int id);
-        PatchUserModel Update(int id, PatchUserModel model);
+        Task<PatchUserModel> UpdateAsync(int id, PatchUserModel model);
         void SetAvatar(int Id, byte[] image);
-        byte[] GetAvatar(int id);
+        Task<byte[]> GetAvatar(int id);
+        
     }
 }

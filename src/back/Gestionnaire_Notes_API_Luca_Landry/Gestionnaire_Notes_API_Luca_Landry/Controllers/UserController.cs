@@ -1,6 +1,8 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
+using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +11,9 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
 {
     public class UserController : ControllerBase
     {
-        private readonly IUser _userService;
+        private readonly IUserService _userService;
         
-        public UserController(IUser userService)
+        public UserController(IUserService userService)
         {
             _userService = userService;
         }
@@ -52,17 +54,8 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         [HttpGet("users/{id}")]
         public IActionResult GetSingle(int id)
         {
-            try
-            {
-                var u = _userService.GetSingle(id);
-                if (u == null) return NotFound();
-                return Ok(u);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            var u = _userService.GetSingle(id);
+            return Ok(u);
         }
 
         [HttpGet("users")]
@@ -80,12 +73,12 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
 
         [HttpPost("users/{id}")]
-        public IActionResult Update([FromRoute] int id, [FromBody] PatchUserModel userUpdated)
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] PatchUserModel userUpdated)
         {
             try
             {
                 if (!_userService.ExistsById(id)) return NotFound();
-                return Ok(_userService.Update(id, userUpdated));
+                return Ok(await _userService.UpdateAsync(id, userUpdated));
             }
             catch (Exception e)
             {
@@ -112,9 +105,9 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
 
         [HttpGet("users/{id}/avatar")]
-        public IActionResult GetAvatar([FromRoute] int id)
+        public async Task<IActionResult> GetAvatar([FromRoute] int id)
         {
-            return File(_userService.GetAvatar(id), "image/jpeg");
+            return File(await _userService.GetAvatar(id), "image/jpeg");
         }
     }
 }

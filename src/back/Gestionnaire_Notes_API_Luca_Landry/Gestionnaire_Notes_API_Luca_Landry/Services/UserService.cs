@@ -1,152 +1,109 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Gestionnaire_Notes_API_Luca_Landry.Data;
+using System.Threading.Tasks;
+using Gestionnaire_Notes_API_Luca_Landry.Exceptions;
 using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
+using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
+using Gestionnaire_Notes_API_Luca_Landry.Repos;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Services
 {
-    public class UserService : IUser
+    public class UserService : IUserService
     {
-        private readonly DataContext _context;
+        private readonly IUser _repo;
 
-        public UserService(DataContext context)
+        public UserService(IUser repo)
         {
-            _context = context;
+            _repo = repo;
         }
-        
         public UserModel AddUser(UserModel newUser)
         {
-            try
-            {
-                _context.Users.Add(newUser);
-                _context.SaveChanges();
-                return newUser;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (newUser == null)
+                throw new ArgumentNullException(nameof(newUser));
+            
+            if (_repo.ExistsByName(newUser.userName))
+                throw new ArgumentException(nameof(newUser.userName), $"User {newUser.userName} already exists.");
+            
+            _repo.AddUser(newUser);
+
+            return newUser;
         }
 
         public void Delete(int id)
         {
-            try
-            {
-                _context.Users.Remove(_context.Users.FirstOrDefault(u => u.Id == id));
-                _context.SaveChanges();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"User Id:{id} doesn't exists.");
+            
+            _repo.Delete(id);
         }
 
         public bool ExistsById(int id)
         {
-            try
-            {
-                return _context.Users.Any(u => u.Id == id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+
+            return _repo.ExistsById(id);
         }
 
         public bool ExistsByName(string name)
         {
-            try
-            {
-                return _context.Users.Any(u => u.userName.Contains(name));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return _repo.ExistsByName(name);
         }
 
-        public IList<UserModel> GetAll()
+        public async Task<IList<UserModel>> GetAll()
         {
-            try
-            {
-                return _context.Users.ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return _repo.GetAll();
         }
 
         public UserModel GetSingle(int id)
         {
-            try
-            {
-                return _context.Users.FirstOrDefault(u => u.Id == id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"User Id:{id} doesn't exists.");
+            
+            return _repo.GetSingle(id);
         }
 
-        public PatchUserModel Update(int id, PatchUserModel model)
+        public async Task<PatchUserModel> UpdateAsync(int id, PatchUserModel model)
         {
-            try
-            {
-
-                var user = _context.Users.FirstOrDefault(u => u.Id == id);
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
             
-                user.userName = model.userName;
-                user.userLastName = model.userLastName;
-                user.userEmail = model.userEmail;
-                user.userPassword = model.userPassword;
-                user.admin = model.admin;
-
-                _context.SaveChanges();
-
-                return model;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (model == null)
+                throw new ArgumentNullException(nameof(model));
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"User Id:{id} doesn't exists.");
+            
+            return _repo.Update(id, model);
         }
 
         public void SetAvatar(int Id, byte[] image)
         {
-            try
-            {
-                var user = _context.Users.Single(u=>u.Id == Id);
-                user.Avatar = image;
-                _context.SaveChanges();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (Id < 1)
+                throw new ArgumentOutOfRangeException(nameof(Id), Id, "Id cannot be lower than 1.");
+            
+            if (!_repo.ExistsById(Id))
+                throw new DataNotFoundException($"User Id:{Id} doesn't exists.");
+            
+            _repo.SetAvatar(Id, image);
         }
 
-        public byte[] GetAvatar(int id)
+        public async Task<byte[]> GetAvatar(int id)
         {
-            try
-            {
-                return _context.Users.Find(id).Avatar;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"User Id:{id} doesn't exists.");
+            
+            return _repo.GetAvatar(id);
         }
     }
 }

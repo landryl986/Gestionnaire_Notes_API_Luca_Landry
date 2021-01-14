@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Gestionnaire_Notes_API_Luca_Landry.Data;
 using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
+using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
+using Gestionnaire_Notes_API_Luca_Landry.Repos;
 using Gestionnaire_Notes_API_Luca_Landry.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -38,7 +40,8 @@ namespace Gestionnaire_Notes_API_Luca_Landry
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Gestionnaire_Notes_API_Luca_Landry", Version = "v1" });
             });
             
-            services.AddTransient<IUser, UserService>();
+            services.AddTransient<IUser, UserRepo>();
+            services.AddTransient<IUserService, UserService>();
             services.AddTransient<IPhilial, PhilialService>();
             services.AddTransient<IBranche, BrancheService>();
             services.AddTransient<INote, NoteService>();

@@ -43,4 +43,18 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
         
         public bool admin { get; set; }
     }
+
+    public class CreateUserDTO
+    {
+        public string userName { get; set; }
+        
+        public string userLastName { get; set; }
+        
+        [EmailAddress]
+        public string userEmail { get; set; }
+        
+        public string userPassword { get; set; }
+        
+        public bool admin { get; set; }
+    }
 }
