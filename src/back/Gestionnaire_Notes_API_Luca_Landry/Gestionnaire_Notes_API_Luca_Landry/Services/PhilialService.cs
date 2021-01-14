@@ -1,125 +1,84 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Gestionnaire_Notes_API_Luca_Landry.Data;
+using System.Threading.Tasks;
+using Gestionnaire_Notes_API_Luca_Landry.Exceptions;
 using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
+using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Services
 {
-    public class PhilialService : IPhilial
+    public class PhilialService : IPhilialService
     {
-        private readonly DataContext _context;
+        private readonly IPhilial _repo;
 
-        public PhilialService(DataContext context)
+        public PhilialService(IPhilial repo)
         {
-            _context = context;
+            _repo = repo;
         }
-        
         public createPhilialDTO AddPhilial(createPhilialDTO newPhilial)
         {
-            try
-            {
-                var philial = new PhilialModel();
-
-                philial.philialName = newPhilial.philialName;
-                philial.userId = newPhilial.userID;
-
-                _context.Philials.Add(philial);
-                _context.SaveChanges();
-                return newPhilial;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (newPhilial == null)
+                throw new ArgumentNullException(nameof(newPhilial));
+            
+            if (_repo.ExistsByName(newPhilial.philialName))
+                throw new ArgumentException(nameof(newPhilial.philialName), $"Philial {newPhilial.philialName} already exists.");
+            
+            return _repo.AddPhilial(newPhilial);
         }
 
         public void Delete(int id)
         {
-            try
-            {
-                _context.Philials.Remove(_context.Philials.FirstOrDefault(p => p.Id == id));
-                _context.SaveChanges();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"Philial Id:{id} doesn't exists.");
+            
+            _repo.Delete(id);
         }
 
         public bool ExistsById(int id)
         {
-            try
-            {
-                return _context.Philials.Any(p => p.Id == id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+
+            return _repo.ExistsById(id);
         }
 
         public bool ExistsByName(string name)
         {
-            try
-            {
-                return _context.Philials.Any(p => p.philialName.Contains(name));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return ExistsByName(name);
         }
 
-        public IList<PhilialModel> GetAll()
+        public async Task<IList<PhilialModel>> GetAll()
         {
-            try
-            {
-                return _context.Philials.ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return _repo.GetAll();
         }
 
         public PhilialModel GetSingle(int id)
         {
-            try
-            {
-                return _context.Philials.FirstOrDefault(p => p.Id == id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"Philial Id:{id} doesn't exists.");
+
+            return _repo.GetSingle(id);
         }
 
-        public PatchPhilialModel Update(int id, PatchPhilialModel model)
+        public async Task<PatchPhilialModel> Update(int id, PatchPhilialModel model)
         {
-            try
-            {
-                var philial = _context.Philials.FirstOrDefault(p => p.Id == id);
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (model == null)
+                throw new ArgumentNullException(nameof(model));
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"Philial Id:{id} doesn't exists.");
 
-                philial.philialName = model.philialName;
-                philial.userId = model.userID;
-
-                _context.SaveChanges();
-
-                return model;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return _repo.Update(id, model);
         }
     }
 }

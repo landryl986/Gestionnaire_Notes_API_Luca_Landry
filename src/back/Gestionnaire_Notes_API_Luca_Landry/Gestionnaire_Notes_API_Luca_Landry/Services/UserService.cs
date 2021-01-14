@@ -5,7 +5,6 @@ using Gestionnaire_Notes_API_Luca_Landry.Exceptions;
 using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
 using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
-using Gestionnaire_Notes_API_Luca_Landry.Repos;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Services
 {

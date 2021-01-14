@@ -23,8 +23,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         {
             try
             {
-                if (_userService.ExistsByName(newUser.userName)) return BadRequest();
-                if (_userService.ExistsById(newUser.Id)) return BadRequest();
 
                 _userService.AddUser(newUser);
 
@@ -42,20 +40,30 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         {
             try
             {
+                //Vu que je retourne rien, pour verifier si le delete marche bien il faut faire un get juste après pour voir si le user a disparus
                 _userService.Delete(id);
                 return NoContent();
             }
             catch (Exception e)
             {
-                return NoContent();
+                Console.WriteLine(e);
+                throw;
             }
         }
 
         [HttpGet("users/{id}")]
         public IActionResult GetSingle(int id)
         {
-            var u = _userService.GetSingle(id);
-            return Ok(u);
+            try
+            {
+                var u = _userService.GetSingle(id);
+                return Ok(u);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         [HttpGet("users")]
@@ -77,7 +85,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         {
             try
             {
-                if (!_userService.ExistsById(id)) return NotFound();
                 return Ok(await _userService.UpdateAsync(id, userUpdated));
             }
             catch (Exception e)

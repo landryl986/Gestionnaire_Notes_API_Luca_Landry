@@ -1,5 +1,6 @@
 using System;
 using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
+using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,9 +8,9 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
 {
     public class PhilialController : ControllerBase
     {
-        private readonly IPhilial _philialService;
+        private readonly IPhilialService _philialService;
         
-        public PhilialController(IPhilial philialService)
+        public PhilialController(IPhilialService philialService)
         {
             _philialService = philialService;
         }
@@ -19,11 +20,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         {
             try
             {
-                if (_philialService.ExistsByName(newPhilial.philialName)) return BadRequest();
-                if (_philialService.ExistsById(newPhilial.Id)) return BadRequest();
-
                 _philialService.AddPhilial(newPhilial);
-
                 return Created($"philials/{newPhilial.Id}", newPhilial);
             }
             catch (Exception e)
@@ -43,7 +40,8 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
             }
             catch (Exception e)
             {
-                return NoContent();
+                Console.WriteLine(e);
+                throw;
             }
         }
         
@@ -53,7 +51,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
             try
             {
                 var u = _philialService.GetSingle(id);
-                if (u == null) return NotFound();
                 return Ok(u);
             }
             catch (Exception e)
@@ -82,7 +79,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         {
             try
             {
-                if (!_philialService.ExistsById(id)) return NotFound();
                 return Ok(_philialService.Update(id, philialUpdated));
             }
             catch (Exception e)

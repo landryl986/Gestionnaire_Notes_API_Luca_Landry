@@ -1,126 +1,86 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Gestionnaire_Notes_API_Luca_Landry.Data;
+using Gestionnaire_Notes_API_Luca_Landry.Exceptions;
 using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
+using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
+using Gestionnaire_Notes_API_Luca_Landry.Repos;
 
 namespace Gestionnaire_Notes_API_Luca_Landry.Services
 {
-    public class BrancheService : IBranche
+    public class BrancheService : IBrancheService
     {
-        private readonly DataContext _context;
+        private readonly IBranche _repo;
 
-        public BrancheService(DataContext context)
+        public BrancheService(IBranche repo)
         {
-            _context = context;
+            _repo = repo;
         }
         public createBrancheDTO AddBranche(createBrancheDTO newBranche)
         {
-            try
-            {
-                var branche = new BrancheModel();
-
-                branche.brancheName = newBranche.brancheName;
-                branche.philialId = newBranche.philialId;
-                branche.barem = newBranche.barem;
-                
-                _context.Branches.Add(branche);
-                _context.SaveChanges();
-                return newBranche;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (newBranche == null)
+                throw new ArgumentNullException(nameof(newBranche));
+            
+            //Nous ne contrôlons pas si une branche du même nom existe déjà car exemple : user 1 a math et user 2 aussi.
+            
+            return _repo.AddBranche(newBranche);
         }
 
         public void Delete(int id)
         {
-            try
-            {
-                _context.Branches.Remove(_context.Branches.FirstOrDefault(b => b.Id == id));
-                _context.SaveChanges();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"Branche Id:{id} doesn't exists.");
+            
+            _repo.Delete(id);
         }
 
         public bool ExistsById(int id)
         {
-            try
-            {
-                return _context.Branches.Any(b => b.Id == id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+
+            return _repo.ExistsById(id);
         }
 
         public bool ExistsByName(string name)
         {
-            try
-            {
-                return _context.Branches.Any(b => b.brancheName.Contains(name));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return ExistsByName(name);
         }
 
-        public IList<BrancheModel> GetAll()
+        public async Task<IList<BrancheModel>> GetAll()
         {
-            try
-            {
-                return _context.Branches.ToList();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return _repo.GetAll();
         }
 
         public BrancheModel GetSingle(int id)
         {
-            try
-            {
-                return _context.Branches.FirstOrDefault(b => b.Id == id);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"Branche Id:{id} doesn't exists.");
+
+            return _repo.GetSingle(id);
         }
 
-        public PatchBrancheModel Update(int id, PatchBrancheModel model)
+        public async Task<PatchBrancheModel> Update(int id, PatchBrancheModel model)
         {
-            try
-            {
-                var branche = _context.Branches.FirstOrDefault(b => b.Id == id);
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+            
+            if (model == null)
+                throw new ArgumentNullException(nameof(model));
+            
+            if (!_repo.ExistsById(id))
+                throw new DataNotFoundException($"Branche Id:{id} doesn't exists.");
 
-                branche.brancheName = model.brancheName;
-                branche.barem = model.barem;
-                branche.philialId = model.philialId;
-
-                _context.SaveChanges();
-
-                return model;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            return _repo.Update(id, model);
         }
     }
 }

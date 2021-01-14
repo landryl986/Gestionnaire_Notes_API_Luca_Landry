@@ -42,9 +42,12 @@ namespace Gestionnaire_Notes_API_Luca_Landry
             
             services.AddTransient<IUser, UserRepo>();
             services.AddTransient<IUserService, UserService>();
-            services.AddTransient<IPhilial, PhilialService>();
-            services.AddTransient<IBranche, BrancheService>();
-            services.AddTransient<INote, NoteService>();
+            services.AddTransient<IPhilial, PhilialRepo>();
+            services.AddTransient<IPhilialService, PhilialService>();
+            services.AddTransient<IBranche, BrancheRepo>();
+            services.AddTransient<IBrancheService, BrancheService>();
+            services.AddTransient<INote, NoteRepo>();
+            services.AddTransient<INoteService, NoteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

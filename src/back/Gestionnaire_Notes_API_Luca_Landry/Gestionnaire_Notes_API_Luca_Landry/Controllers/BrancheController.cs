@@ -1,5 +1,6 @@
 using System;
 using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
+using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,9 +8,9 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
 {
     public class BrancheController : ControllerBase
     {
-        private readonly IBranche _brancheService;
+        private readonly IBrancheService _brancheService;
         
-        public BrancheController(IBranche brancheService)
+        public BrancheController(IBrancheService brancheService)
         {
             _brancheService = brancheService;
         }
@@ -19,11 +20,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         {
             try
             {
-                if (_brancheService.ExistsByName(newBranche.brancheName)) return BadRequest();
-                if (_brancheService.ExistsById(newBranche.Id)) return BadRequest();
-
                 _brancheService.AddBranche(newBranche);
-
                 return Created($"branches/{newBranche.Id}", newBranche);
             }
             catch (Exception e)
@@ -43,7 +40,8 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
             }
             catch (Exception e)
             {
-                return NoContent();
+                Console.WriteLine(e);
+                throw;
             }
         }
         
@@ -53,7 +51,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
             try
             {
                 var u = _brancheService.GetSingle(id);
-                if (u == null) return NotFound();
                 return Ok(u);
             }
             catch (Exception e)
@@ -82,7 +79,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         {
             try
             {
-                if (!_brancheService.ExistsById(id)) return NotFound();
                 return Ok(_brancheService.Update(id, brancheUpdated));
             }
             catch (Exception e)

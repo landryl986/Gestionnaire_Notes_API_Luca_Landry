@@ -1,3 +1,7 @@
+#To know
+> all diagrams are into the project in:
+>`DBdiagram`, `DiagramActivite`,`UseCase` folders 
+
 #To do
 
 >Firsteval first thing to know is how to run the API (Backend) :
