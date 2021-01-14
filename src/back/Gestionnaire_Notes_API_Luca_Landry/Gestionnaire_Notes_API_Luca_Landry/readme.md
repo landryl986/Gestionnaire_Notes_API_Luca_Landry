@@ -1,6 +1,8 @@
 #To know
 > all diagrams are into the project in:
->`DBdiagram`, `DiagramActivite`,`UseCase` folders 
+>`DBdiagram`, `DiagramActivite`,`UseCase` folders
+
+>Classes `UserService.cs` and `BrancheService.cs` are the only tow wich are tested 
 
 #To do
 
