@@ -9,32 +9,32 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Gestionnaire_Notes_API_Luca_Landry.Tests
 {
     [TestClass]
-    public class TestBrancheService
+    public class TestUserService
     {
-        private readonly IBrancheService _brancheService = new BrancheService(null);
+        private readonly IUserService _userService = new UserService(null);
 
         [TestMethod]
-        public async Task AddBrancheTest()
+        public async Task AddUserNullTest()
         {
-            createBrancheDTO response = null;
+            UserModel response = null;
 
-            Assert.ThrowsException<ArgumentNullException>(() => _brancheService.AddBranche(response));
+            Assert.ThrowsException<ArgumentNullException>(() => _userService.AddUser(response));
         }
 
         [TestMethod]
-        public async Task DeleteBrancheNegTest()
+        public async Task DeleteUserNegTest()
         {
             int idNeg = -7;
 
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _brancheService.Delete(idNeg));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _userService.Delete(idNeg));
         }
         
         [TestMethod]
-        public async Task ExistByIdBrancheNegTest()
+        public async Task ExistByIdUserNegTest()
         {
             int idNeg = -7;
 
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _brancheService.ExistsById(idNeg));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _userService.ExistsById(idNeg));
         }
         
         [TestMethod]
@@ -42,27 +42,27 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Tests
         {
             int idNeg = -7;
 
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _brancheService.GetSingle(idNeg));
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _userService.GetSingle(idNeg));
         }
         
         [TestMethod]
         public async Task UpdateBrancheNullTest()
         {
             int id = 1;
-            PatchBrancheModel updateNeg = null;
+            PatchUserModel updateNeg = null;
 
-            Assert.ThrowsExceptionAsync<DataNotFoundException>(() => _brancheService.Update(id, updateNeg));
+            Assert.ThrowsExceptionAsync<DataNotFoundException>(() => _userService.UpdateAsync(id, updateNeg));
         }
         
         [TestMethod]
         public async Task UpdateBrancheNegTest()
         {
             int idNeg = -7;
-            PatchBrancheModel updateNeg = new PatchBrancheModel();
+            PatchUserModel updateNeg = new PatchUserModel();
 
-            updateNeg.brancheName = "test";
+            updateNeg.userName = "test";
 
-            Assert.ThrowsExceptionAsync<ArgumentOutOfRangeException>(() => _brancheService.Update(idNeg, updateNeg));
+            Assert.ThrowsExceptionAsync<ArgumentOutOfRangeException>(() => _userService.UpdateAsync(idNeg, updateNeg));
         }
     }
 }
