@@ -20,7 +20,6 @@ export class RegisterComponent implements OnInit {
 
   Add(): void
   {
-    debugger;
     this._service.Add(this.user);
     this.user = {} as IUser;
   }
