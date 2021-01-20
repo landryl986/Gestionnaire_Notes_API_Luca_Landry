@@ -20,7 +20,10 @@ export class RegisterComponent implements OnInit {
 
   Add(): void
   {
-    this._service.Add(this.user);
+    this._service.Add(this.user).subscribe(
+      (res) => console.log(res),
+        (err) => console.log(err)
+    );
     this.user = {} as IUser;
   }
 
