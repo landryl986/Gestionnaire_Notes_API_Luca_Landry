@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../../../../Services/user.service';
-import {IUser} from '../../../../../Interfaces/IUser';
+import {ICreateUserDto} from '../../../../../Interfaces/ICreateUserDto';
 
 @Component({
   selector: 'app-register',
@@ -8,11 +8,11 @@ import {IUser} from '../../../../../Interfaces/IUser';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  user: IUser;
+  user: ICreateUserDto;
   // tslint:disable-next-line:variable-name
   constructor(private _service: UserService)
   {
-    this.user = {} as IUser;
+    this.user = {} as ICreateUserDto;
   }
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
       (res) => console.log(res),
         (err) => console.log(err)
     );
-    this.user = {} as IUser;
+    this.user = {} as ICreateUserDto;
   }
 
 }
