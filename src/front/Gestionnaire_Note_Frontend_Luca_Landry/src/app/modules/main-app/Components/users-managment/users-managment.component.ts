@@ -26,7 +26,7 @@ export class UsersManagmentComponent implements OnInit {
       {
         if (data)
         {
-          this.users = data;
+          this.users = data['result'];
         }
       },
       error => {}
