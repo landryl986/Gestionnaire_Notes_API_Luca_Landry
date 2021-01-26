@@ -1,1 +1,66 @@
-<p>filiale works!</p>
+<!--
+  UI Design Prototype
+  Link : https://dribbble.com/shots/10452538-React-UI-Components
+-->
+<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+    <div class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
+      <div class="max-w-md mx-auto">
+        <div class="flex items-center space-x-5">
+          <div class="h-14 w-14 bg-yellow-200 rounded-full flex flex-shrink-0 justify-center items-center text-yellow-500 text-2xl font-mono">i</div>
+          <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
+            <h2 class="leading-relaxed">Créer une filiale</h2>
+            <p class="text-sm text-gray-500 font-normal leading-relaxed">Exemple : CFC, ECG. La filiale sera la racine</p>
+          </div>
+        </div>
+        <div class="divide-y divide-gray-200">
+          <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+            <div class="flex flex-col">
+              <label class="leading-loose">Nom de la Filiale</label>
+              <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Event title" [(ngModel)]="filiale.philialName">
+            </div>
+
+            <div class="pt-4 flex items-center space-x-4">
+              <button class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none" (click)="addFilial()">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="userManagment">
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="flex flex-col">
+    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Name
+              </th>
+              <th scope="col" class="relative px-6 py-3">
+                <span class="sr-only">Edit</span>
+              </th>
+            </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+            <tr *ngFor="let filiale of filiales">
+              <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="ml-4">
+                    <div class="text-sm font-medium text-gray-900">
+                      {{filiale.philialName}}
+                    </div>
+                  </div>
+              </td>
+            </tr>
+            <!-- More items... -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
