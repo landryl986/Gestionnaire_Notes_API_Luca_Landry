@@ -1,0 +1,28 @@
+<html>
+<head>
+  <style>
+    .duration-4 {
+      transition-duration: 0.4s;
+    }
+  </style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<div class="bg-grey-light py-8 w-full flex justify-center items-center">
+  <div class="bg-white rounded w-1/4 shadow hover:shadow-md duration-4">
+    <div class="flex flex-row justify-between uppercase font-bold text-blue-dark border-b p-6">
+      <p>{{filiale.philialName}}<p>
+      <button class="uppercase p-3 flex items-center bg-red-500 text-blue-50 max-w-max shadow-sm hover:shadow-lg rounded-full w-12 h-12 " (click)="selectFiliale()">
+        <svg width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);"><path d="M12 12h2v12h-2z" fill="currentColor"></path><path d="M18 12h2v12h-2z" fill="currentColor"></path><path d="M4 6v2h2v20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8h2V6zm4 22V8h16v20z" fill="currentColor"></path><path d="M12 2h8v2h-8z" fill="currentColor"></path></svg>
+      </button>
+    </div>
+    <div class="p-6 text-grey-darker text-justify flex flex-col">
+      <img src="https://picsum.photos/300/300" alt="Some image" class="w-64 flex self-center rounded-full shadow-lg mb-6">
+    </div>
+    <div class="p-6 text-grey-darker text-justify flex flex-row justify-end border-t">
+      <button class="uppercase self-end text-blue mx-8 text-sm hover:text-blue-dark duration-4 self-center">branches</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
