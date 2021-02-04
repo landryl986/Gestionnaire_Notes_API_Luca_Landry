@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tailwind-angular-starter';
+  title = 'Gestionnaire_Note_Frontend_Luca_Landry';
 }

@@ -1,76 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
-      <e p="appsettings.Development.json" t="Include" />
-      <e p="appsettings.json" t="Include" />
-      <e p="bin" t="ExcludeRecursive" />
-      <e p="Controllers" t="Include">
-        <e p="BrancheController.cs" t="Include" />
-        <e p="NoteController.cs" t="Include" />
-        <e p="PhilialController.cs" t="Include" />
-        <e p="UserController.cs" t="Include" />
-      </e>
-      <e p="Data" t="Include">
-        <e p="DataContext.cs" t="Include" />
-      </e>
-      <e p="DBDiagram" t="Include">
-        <e p="DBDiagram.png" t="Include" />
-        <e p="DBDiagramModifiable.xml" t="Include" />
-      </e>
-      <e p="DiagramActivite" t="Include">
-        <e p="DiagramActivite.png" t="Include" />
-        <e p="DiagramActiviteModifiable.xml" t="Include" />
-      </e>
-      <e p="Enums" t="Include">
-        <e p="Barems.cs" t="Include" />
-      </e>
-      <e p="Gestionnaire_Notes_API_Luca_Landry.csproj" t="IncludeRecursive" />
-      <e p="Gestionnaire_Notes_API_Luca_Landry.db" t="Include" />
-      <e p="Interfaces" t="Include">
-        <e p="IBranche.cs" t="Include" />
-        <e p="INote.cs" t="Include" />
-        <e p="IPhilial.cs" t="Include" />
-        <e p="IUser.cs" t="Include" />
-      </e>
-      <e p="Migrations" t="Include">
-        <e p="20210111152647_UpdateAll.cs" t="Include" />
-        <e p="20210111152647_UpdateAll.Designer.cs" t="Include" />
-        <e p="DataContextModelSnapshot.cs" t="Include" />
-      </e>
-      <e p="Models" t="Include">
-        <e p="BrancheModel.cs" t="Include" />
-        <e p="NoteModel.cs" t="Include" />
-        <e p="PhilialModel.cs" t="Include" />
-        <e p="UserModel.cs" t="Include" />
-      </e>
-      <e p="obj" t="ExcludeRecursive">
-        <e p="Debug" t="Include">
-          <e p="net5.0" t="Include">
-            <e p="Gestionnaire_Notes_API_Luca_Landry.AssemblyInfo.cs" t="Include" />
-          </e>
-        </e>
-      </e>
-      <e p="packages" t="ExcludeRecursive" />
-      <e p="Program.cs" t="Include" />
-      <e p="Properties" t="Include">
-        <e p="launchSettings.json" t="Include" />
-      </e>
-      <e p="README.md" t="Include" />
-      <e p="Services" t="Include">
-        <e p="BrancheService.cs" t="Include" />
-        <e p="NoteService.cs" t="Include" />
-        <e p="PhilialService.cs" t="Include" />
-        <e p="UserService.cs" t="Include" />
-      </e>
-      <e p="Startup.cs" t="Include" />
-      <e p="UseCase" t="Include">
-        <e p="UseCaseAdmin.png" t="Include" />
-        <e p="UseCaseAdminModifiable.xml" t="Include" />
-        <e p="UseCaseUser.png" t="Include" />
-        <e p="UseCaseUserModifiable.xml" t="Include" />
-      </e>
-    </e>
+    <e p="$PROJECT_DIR$" t="IncludeFlat" />
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />

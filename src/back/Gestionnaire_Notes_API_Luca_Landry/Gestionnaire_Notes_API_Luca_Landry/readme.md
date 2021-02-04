@@ -2,7 +2,7 @@
 > all diagrams are into the project in:
 >`DBdiagram`, `DiagramActivite`,`UseCase` folders
 
->Classes `UserService.cs` and `BrancheService.cs` are the only tow wich are tested 
+>Classes `UserService.cs` and `BrancheService.cs` are the only tow wich have unite test for
 
 #To do
 
@@ -12,4 +12,4 @@
 
 >Secondeval you have to put "/swagger" at the end of the URL to test the backend
 
->to run tests the command is : `dotnet run test`
+>to run tests, youhave to go to Gestionnaire_Notes_API_Luca_Landry.Tests and run command : `dotnet run test`

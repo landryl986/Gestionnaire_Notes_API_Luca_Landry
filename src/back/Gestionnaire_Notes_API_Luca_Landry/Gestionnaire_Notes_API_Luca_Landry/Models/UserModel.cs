@@ -46,7 +46,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Models
 
     public class CreateUserDTO
     {
-        public string userName { get; set; }
+        public string UserName { get; set; }
         
         public string userLastName { get; set; }
         

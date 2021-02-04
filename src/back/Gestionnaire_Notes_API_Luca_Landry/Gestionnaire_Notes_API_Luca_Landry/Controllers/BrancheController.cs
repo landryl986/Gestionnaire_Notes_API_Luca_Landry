@@ -16,7 +16,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
         
         [HttpPost("branches")]
-        public IActionResult Add(createBrancheDTO newBranche)
+        public IActionResult Add([FromBody]createBrancheDTO newBranche)
         {
             try
             {

@@ -16,7 +16,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
         
         [HttpPost("philials")]
-        public IActionResult Add(createPhilialDTO newPhilial)
+        public IActionResult Add([FromBody]createPhilialDTO newPhilial)
         {
             try
             {
@@ -50,8 +50,23 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         {
             try
             {
-                var u = _philialService.GetSingle(id);
-                return Ok(u);
+                var p = _philialService.GetSingle(id);
+                return Ok(p);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
+        [HttpGet("philials/{id}/user")]
+        public IActionResult GetAllByUser(int id)
+        {
+            try
+            {
+                var p = _philialService.GetAllByUser(id);
+                return Ok(p);
             }
             catch (Exception e)
             {

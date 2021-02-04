@@ -17,29 +17,29 @@ export class NoteService {
     this.note = {} as INote;
   }
 
-  Add(newNote: INote): Observable<[INote]>
+  Add(newNote: INote): Observable<INote>
   {
-    return this.http.post<[INote]>(this.route, newNote);
+    return this.http.post<INote>(this.route, newNote);
   }
 
-  Delete(id: number): Observable<[INote]>
+  Delete(id: number): Observable<INote>
   {
-    return this.http.delete<[INote]>(this.route + '/' + id.toString());
+    return this.http.delete<INote>(this.route + '/' + id.toString());
   }
 
-  GetSingle(id: number): Observable<[INote]>
+  GetSingle(id: number): Observable<INote>
   {
-    return this.http.get<[INote]>(this.route + '/' + id.toString());
+    return this.http.get<INote>(this.route + '/' + id.toString());
   }
 
   GetAll(): Observable<Array<INote>>
   {
-    return this.http.get<[INote]>(this.route);
+    return this.http.get<Array<INote>>(this.route);
   }
 
-  Update(id: number, userUpdated: INote): Observable<[INote]>
+  Update(id: number, userUpdated: INote): Observable<INote>
   {
     // @ts-ignore
-    return this.http.post<[INote]>(this.route + '/' + id.toString());
+    return this.http.post<INote>(this.route + '/' + id.toString());
   }
 }

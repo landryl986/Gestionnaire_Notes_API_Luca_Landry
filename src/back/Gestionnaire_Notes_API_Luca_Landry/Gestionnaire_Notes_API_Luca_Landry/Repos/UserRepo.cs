@@ -16,13 +16,21 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Repos
             _context = context;
         }
         
-        public UserModel AddUser(UserModel newUser)
+        public UserModel AddUser(CreateUserDTO newUser)
         {
             try
             {
-                _context.Users.Add(newUser);
+                var user = new UserModel();
+
+                user.userName = newUser.UserName;
+                user.admin = newUser.admin;
+                user.userEmail = newUser.userEmail;
+                user.userPassword = newUser.userPassword;
+                user.userLastName = newUser.userLastName;
+
+                _context.Users.Add(user);
                 _context.SaveChanges();
-                return newUser;
+                return user;
             }
             catch (Exception e)
             {
@@ -89,6 +97,47 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Repos
             try
             {
                 return _context.Users.FirstOrDefault(u => u.Id == id);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public UserModel GetByMail(string mail)
+        {
+            try
+            {
+                return _context.Users.FirstOrDefault(u => u.userEmail == mail);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public bool Login(string email, string pwd)
+        {
+            try
+            {
+                var user = _context.Users.FirstOrDefault(u => u.userEmail == email);
+
+                if (user != null)
+                {
+                    if (user.userPassword == pwd)
+                    {
+                        return true;
+                    }else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch (Exception e)
             {

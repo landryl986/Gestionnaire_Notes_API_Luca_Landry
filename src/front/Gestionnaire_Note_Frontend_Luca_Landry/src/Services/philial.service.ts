@@ -16,29 +16,34 @@ export class PhilialService {
     this.philial = {} as IPhilial;
   }
 
-  Add(newPhilial: IPhilial): Observable<[IPhilial]>
+  Add(newPhilial: IPhilial): Observable<IPhilial>
   {
-    return this.http.post<[IPhilial]>(this.route, newPhilial);
+    return this.http.post<IPhilial>(this.route, newPhilial);
   }
 
-  Delete(id: number): Observable<[IPhilial]>
+  Delete(id: number): Observable<IPhilial>
   {
-    return this.http.delete<[IPhilial]>(this.route + '/' + id.toString());
+    return this.http.delete<IPhilial>(this.route + '/' + id.toString());
   }
 
-  GetSingle(id: number): Observable<[IPhilial]>
+  GetSingle(id: number): Observable<IPhilial>
   {
-    return this.http.get<[IPhilial]>(this.route + '/' + id.toString());
+    return this.http.get<IPhilial>(this.route + '/' + id.toString());
   }
 
   GetAll(): Observable<Array<IPhilial>>
   {
-    return this.http.get<[IPhilial]>(this.route);
+    return this.http.get<Array<IPhilial>>(this.route);
   }
 
-  Update(id: number, userUpdated: IPhilial): Observable<[IPhilial]>
+  GetAllByUser(id: number): Observable<Array<IPhilial>>
+  {
+    return this.http.get<Array<IPhilial>>(this.route + '/' + id + '/user');
+  }
+
+  Update(id: number, userUpdated: IPhilial): Observable<IPhilial>
   {
     // @ts-ignore
-    return this.http.post<[IPhilial]>(this.route + '/' + id.toString());
+    return this.http.post<IPhilial>(this.route + '/' + id.toString());
   }
 }

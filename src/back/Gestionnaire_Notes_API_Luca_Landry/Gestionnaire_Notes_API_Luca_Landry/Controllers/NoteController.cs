@@ -16,7 +16,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
         
         [HttpPost("notes")]
-        public IActionResult Add(createNoteDTO newNote)
+        public IActionResult Add([FromBody]createNoteDTO newNote)
         {
             try
             {

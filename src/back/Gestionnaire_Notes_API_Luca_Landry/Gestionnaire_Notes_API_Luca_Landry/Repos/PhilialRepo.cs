@@ -88,6 +88,19 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Repos
             }
         }
 
+        public IList<PhilialModel> GetAllByUser(int id)
+        {
+            try
+            {
+                return _context.Philials.Where(p => p.userId == id).ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
         public PhilialModel GetSingle(int id)
         {
             try

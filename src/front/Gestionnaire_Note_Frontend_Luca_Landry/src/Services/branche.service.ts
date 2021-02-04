@@ -17,29 +17,29 @@ export class BrancheService {
     this.branche = {} as IBranche;
   }
 
-  Add(newBranche: IBranche): Observable<[IBranche]>
+  Add(newBranche: IBranche): Observable<IBranche>
   {
-    return this.http.post<[IBranche]>(this.route, newBranche);
+    return this.http.post<IBranche>(this.route, newBranche);
   }
 
-  Delete(id: number): Observable<[IBranche]>
+  Delete(id: number): Observable<IBranche>
   {
-    return this.http.delete<[IBranche]>(this.route + '/' + id.toString());
+    return this.http.delete<IBranche>(this.route + '/' + id.toString());
   }
 
-  GetSingle(id: number): Observable<[IBranche]>
+  GetSingle(id: number): Observable<IBranche>
   {
-    return this.http.get<[IBranche]>(this.route + '/' + id.toString());
+    return this.http.get<IBranche>(this.route + '/' + id.toString());
   }
 
   GetAll(): Observable<Array<IBranche>>
   {
-    return this.http.get<[IBranche]>(this.route);
+    return this.http.get<Array<IBranche>>(this.route);
   }
 
-  Update(id: number, userUpdated: IBranche): Observable<[IBranche]>
+  Update(id: number, userUpdated: IBranche): Observable<IBranche>
   {
     // @ts-ignore
-    return this.http.post<[IBranche]>(this.route + '/' + id.toString());
+    return this.http.post<IBranche>(this.route + '/' + id.toString());
   }
 }

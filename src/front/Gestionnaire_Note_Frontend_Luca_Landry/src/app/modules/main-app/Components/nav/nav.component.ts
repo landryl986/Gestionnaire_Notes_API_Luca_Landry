@@ -9,11 +9,13 @@ import {UserService} from "../../../../../Services/user.service";
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  user: IUser;
 
-  constructor(private service: AuthentificationService, private  userService: UserService) {}
-
-  ngOnInit(): void {
+  constructor(private service: AuthentificationService, private  userService: UserService) {
+    this.user = {} as IUser;
   }
+
+  ngOnInit(): void {}
   deco(): void
   {
     this.service.disconect();

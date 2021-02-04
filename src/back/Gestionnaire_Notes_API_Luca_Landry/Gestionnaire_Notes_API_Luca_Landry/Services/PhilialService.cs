@@ -56,6 +56,14 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             return _repo.GetAll();
         }
 
+        public IList<PhilialModel> GetAllByUser(int id)
+        {
+            if (id < 1)
+                throw new ArgumentOutOfRangeException(nameof(id), id, "Id cannot be lower than 1.");
+
+            return _repo.GetAllByUser(id);
+        }
+
         public PhilialModel GetSingle(int id)
         {
             if (id < 1)

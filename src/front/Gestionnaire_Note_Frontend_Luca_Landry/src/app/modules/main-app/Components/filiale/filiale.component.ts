@@ -25,10 +25,9 @@ export class FilialeComponent implements OnInit {
     this.filiale.userId = Number(localStorage.getItem('Id'));
 
     this.service.Add(this.filiale).subscribe(
-      (res) => console.log(res),
+      (res) => window.location.reload(),
       (err) => console.log(err)
     );
-    this.filiale = {} as IPhilial;
   }
 
   GetAll(): void
@@ -40,11 +39,18 @@ export class FilialeComponent implements OnInit {
       {
         if (data)
         {
-          this.filiales = data['result'];
+          this.filiales = data;
         }
       },
-      error => {}
+      error => {debugger;}
     );
+  }
+  UpdateFiliale(filiale: IPhilial): void{
+    this.service.Update(filiale.id, filiale).subscribe(() => this.GetAll());
+  }
+  delFiliale(filiale: IPhilial): void{
+    debugger;
+    this.service.Delete(filiale.id).subscribe(() => this.GetAll());
   }
 
 }

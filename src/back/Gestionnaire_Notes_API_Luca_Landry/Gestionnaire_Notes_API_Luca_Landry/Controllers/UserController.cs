@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using Gestionnaire_Notes_API_Luca_Landry.Interfaces;
 using Gestionnaire_Notes_API_Luca_Landry.InterfacesService;
 using Gestionnaire_Notes_API_Luca_Landry.Models;
 using Microsoft.AspNetCore.Http;
@@ -19,14 +18,14 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
         }
 
         [HttpPost("users")]
-        public IActionResult Add(UserModel newUser)
+        public IActionResult Add([FromBody]CreateUserDTO newUser)
         {
             try
             {
 
-                _userService.AddUser(newUser);
+                var user = _userService.AddUser(newUser);
 
-                return Created($"users/{newUser.Id}", newUser);
+                return Created($"users/{user.Id}", newUser);
             }
             catch (Exception e)
             {
@@ -72,6 +71,34 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Controllers
             try
             {
                 return Ok(_userService.GetAll());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
+        [HttpGet("users/{email}/{pwd}/login")]
+        public IActionResult Login(string email, string pwd)
+        {
+            try
+            {
+                return Ok(_userService.Login(email, pwd));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+        
+        [HttpGet("users/{email}/email")]
+        public IActionResult GetByMail(string email)
+        {
+            try
+            {
+                return Ok(_userService.GetByMail(email));
             }
             catch (Exception e)
             {

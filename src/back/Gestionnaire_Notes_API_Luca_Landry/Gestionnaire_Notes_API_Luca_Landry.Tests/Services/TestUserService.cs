@@ -16,7 +16,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Tests
         [TestMethod]
         public async Task AddUserNullTest()
         {
-            UserModel response = null;
+            CreateUserDTO response = null;
 
             Assert.ThrowsException<ArgumentNullException>(() => _userService.AddUser(response));
         }

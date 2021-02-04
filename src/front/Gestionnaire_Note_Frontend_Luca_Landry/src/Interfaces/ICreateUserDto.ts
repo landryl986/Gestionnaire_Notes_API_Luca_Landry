@@ -1,9 +1,8 @@
-export interface IUser
+export interface ICreateUserDto
 {
   userName: string;
   userLastName: string;
   userEmail: string;
   userPassword: string;
-  Avatar: File;
   admin: boolean;
 }

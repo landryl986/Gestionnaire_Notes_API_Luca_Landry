@@ -11,6 +11,7 @@ namespace Gestionnaire_Notes_API_Luca_Landry.InterfacesService
         bool ExistsById(int id);
         bool ExistsByName(string name);
         Task<IList<PhilialModel>> GetAll();
+        IList<PhilialModel> GetAllByUser(int id);
         PhilialModel GetSingle(int id);
         Task<PatchPhilialModel> Update(int id, PatchPhilialModel model);
     }

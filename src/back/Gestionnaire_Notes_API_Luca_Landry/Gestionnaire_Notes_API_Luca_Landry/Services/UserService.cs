@@ -16,17 +16,17 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
         {
             _repo = repo;
         }
-        public UserModel AddUser(UserModel newUser)
+        public UserModel AddUser(CreateUserDTO newUser)
         {
             if (newUser == null)
                 throw new ArgumentNullException(nameof(newUser));
             
-            if (_repo.ExistsByName(newUser.userName))
-                throw new ArgumentException(nameof(newUser.userName), $"User {newUser.userName} already exists.");
+            if (_repo.ExistsByName(newUser.UserName))
+                throw new ArgumentException(nameof(newUser.UserName), $"User {newUser.UserName} already exists.");
             
-            _repo.AddUser(newUser);
+            var user = _repo.AddUser(newUser);
 
-            return newUser;
+            return user;
         }
 
         public void Delete(int id)
@@ -67,6 +67,16 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
                 throw new DataNotFoundException($"User Id:{id} doesn't exists.");
             
             return _repo.GetSingle(id);
+        }
+
+        public bool Login(string email, string pwd)
+        {
+            return _repo.Login(email, pwd);
+        }
+
+        public UserModel GetByMail(string mail)
+        {
+            return _repo.GetByMail(mail);
         }
 
         public async Task<PatchUserModel> UpdateAsync(int id, PatchUserModel model)

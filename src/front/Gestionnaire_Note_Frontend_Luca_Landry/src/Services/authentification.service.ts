@@ -1,59 +1,24 @@
 import { Injectable } from '@angular/core';
-import {UserService} from './user.service';
 import {IUser} from '../Interfaces/IUser';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthentificationService {
 
-  public isLogged = false;
+  public isLogged: boolean;
   user: IUser;
   users: Array<IUser>;
+  pwd: string;
 
   // tslint:disable-next-line:variable-name
-  constructor(private _userService: UserService) {}
-
-  public login(userName: string, userPassword: string): boolean
-  {
-    localStorage.setItem('isLogged', String(this.isLogged));
-    this._userService.GetAll().subscribe
-    (
-      data =>
-      {
-        if (data){
-          this.users = data;
-        }
-      },
-      error =>
-      { }
-    );
-
-    if (this.users.filter(n => n.userName === userName))
-    {
-      // @ts-ignore
-      this.user = this.users.filter(n => n.userName === userName);
-
-      if (this.user.userPassword === userPassword)
-      {
-        this.isLogged = true;
-      } else
-      {
-        this.isLogged = false;
-      }
-    } else
-    {
-      this.isLogged = false;
-    }
-
-    return this.isLogged;
-    localStorage.setItem('isLogged', String(this.isLogged));
-
-  }
+  constructor(private route: Router) {}
 
   public disconect(): void{
     this.isLogged = false;
+    localStorage.clear();
     localStorage.setItem('isLogged', String(this.isLogged));
-
+    this.route.navigate(['login']);
   }
 }
