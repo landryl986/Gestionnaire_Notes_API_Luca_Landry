@@ -21,9 +21,6 @@ namespace Gestionnaire_Notes_API_Luca_Landry.Services
             if (newPhilial == null)
                 throw new ArgumentNullException(nameof(newPhilial));
             
-            if (_repo.ExistsByName(newPhilial.philialName))
-                throw new ArgumentException(nameof(newPhilial.philialName), $"Philial {newPhilial.philialName} already exists.");
-            
             return _repo.AddPhilial(newPhilial);
         }
 

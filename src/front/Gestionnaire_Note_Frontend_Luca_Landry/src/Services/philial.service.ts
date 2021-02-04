@@ -44,6 +44,6 @@ export class PhilialService {
   Update(id: number, userUpdated: IPhilial): Observable<IPhilial>
   {
     // @ts-ignore
-    return this.http.post<IPhilial>(this.route + '/' + id.toString());
+    return this.http.post<IPhilial>(this.route + '/' + id.toString(), userUpdated);
   }
 }

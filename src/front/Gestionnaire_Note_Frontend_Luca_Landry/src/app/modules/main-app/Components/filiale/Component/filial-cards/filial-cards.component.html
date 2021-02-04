@@ -20,10 +20,31 @@
       <img src="https://picsum.photos/300/300" alt="Some image" class="w-64 flex self-center rounded-full shadow-lg mb-6">
     </div>
     <div class="p-6 text-grey-darker text-justify flex flex-row justify-end border-t">
-      <button class="uppercase self-end text-blue mx-8 text-sm hover:text-blue-dark duration-4 self-center">update</button>
+    <button class="modal-open uppercase self-end text-blue mx-8 text-sm hover:text-blue-dark duration-4 self-center" (click)="modalOpen = true">Update</button>
     </div>
-    <div class="p-6 text-grey-darker text-justify flex flex-row justify-end border-t">
-      <button class="uppercase self-end text-blue mx-8 text-sm hover:text-blue-dark duration-4 self-center">branches</button>
+    <!--Modal-->
+    <div class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center {{!modalOpen && 'pointer-events-none opacity-0'}}">
+      <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+      <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+
+        <!-- Add margin if you want to see some of the overlay behind the modal-->
+        <div class="modal-content py-4 text-left px-6">
+          <!--Title-->
+          <div class="flex justify-between items-center pb-3">
+            <p class="text-2xl font-bold">Modifier filiale N.{{filiale.id}}</p>
+          </div>
+          <div>
+            <input id="filiale-name" name="filiale" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" [(ngModel)]="filiale.philialName">
+          </div>
+          <!--Footer-->
+          <div class="flex justify-end pt-2">
+            <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2" (click)="selectFilialeUpdate()">Update</button>
+            <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400" (click)="modalOpen = false">Close</button>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -49,7 +49,6 @@ export class FilialeComponent implements OnInit {
     this.service.Update(filiale.id, filiale).subscribe(() => this.GetAll());
   }
   delFiliale(filiale: IPhilial): void{
-    debugger;
     this.service.Delete(filiale.id).subscribe(() => this.GetAll());
   }
 

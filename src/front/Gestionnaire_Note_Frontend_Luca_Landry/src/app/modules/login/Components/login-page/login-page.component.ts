@@ -42,9 +42,7 @@ export class LoginPageComponent implements OnInit {
         }
         this.router.navigate(['app']);
       },
-      error => {
-        this.errormessage = 'error login';
-      }
+      error => {console.log(error); }
     );
   }
 }

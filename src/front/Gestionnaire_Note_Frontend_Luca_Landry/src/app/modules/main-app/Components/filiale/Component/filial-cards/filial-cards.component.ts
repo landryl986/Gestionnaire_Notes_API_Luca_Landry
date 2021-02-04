@@ -8,6 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./filial-cards.component.scss']
 })
 export class FilialCardsComponent implements OnInit {
+  modalOpen = false;
 
   constructor(private service: PhilialService, ) { }
 
@@ -20,11 +21,11 @@ export class FilialCardsComponent implements OnInit {
   }
 
   selectFiliale(): void {
-    debugger;
     this.filialeSelected.emit(this.filiale);
   }
 
   selectFilialeUpdate(): void {
+    debugger;
     this.filialeSelectedUpdate.emit(this.filiale);
   }
 
