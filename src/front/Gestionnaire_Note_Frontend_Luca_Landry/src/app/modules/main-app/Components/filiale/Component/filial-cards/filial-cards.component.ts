@@ -20,6 +20,7 @@ export class FilialCardsComponent implements OnInit {
   }
 
   selectFiliale(): void {
+    debugger;
     this.filialeSelected.emit(this.filiale);
   }
 
